@@ -1,0 +1,19 @@
+#grid{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+  
+   gap:10px
+}   #day{
+    color: rgb(67,151,203);
+  font-size: small;
+}
+#box{
+    background-color: rgb(241,245,246);
+}
+#container{
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+}
+#container:hover{
+    border: 2px solid blue;
+}
