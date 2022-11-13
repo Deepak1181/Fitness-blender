@@ -74,7 +74,7 @@ const navigate=useNavigate()
   <Flex gap={"40px"} marginLeft={"40px"} >
   <Text onClick={()=>navigate("/programs")}>Workout Program </Text>
    
-    <Text>Meal Plane</Text>
+    <Text>Meals Plane</Text>
 
     <Text>Pilots Programe</Text>
    
