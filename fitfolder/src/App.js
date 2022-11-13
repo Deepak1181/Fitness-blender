@@ -2,7 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import Navbaar from './Component/Navbaar';
 import Home from './Component/Home';
+import Program from './Component/Program';
 import Programs from './Component/Programs';
+import Fotter from './Component/Fotter';
+import AllRoutes from './Component/AllRoutes';
 
 
 
@@ -10,11 +13,12 @@ import Programs from './Component/Programs';
 function App() {
   return (
     <div className="App">
-
-    <Navbaar/>
+<AllRoutes/>
+    {/* <Navbaar/>
     <Home/>
-    <Programs/>
- 
+    <Program/> */}
+
+ {/* <Fotter/> */}
     </div>
   );
 }

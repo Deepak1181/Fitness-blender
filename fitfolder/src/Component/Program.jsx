@@ -3,15 +3,15 @@ import { useEffect } from 'react'
 import axios from "axios"
 import { AuthContext } from './AuthComponent'
 import "./Programs.css";
-export default function Allproducts() {
+import { Link } from 'react-router-dom';
+export default function Program() {
 
 const {state,dispatch}=useContext(AuthContext)
 
 
 
 useEffect(()=>{
-axios.get(`https://mockapitestkiyaji.herokuapp.com/products`)
-.then((res)=>dispatch({type:"datafetch",payload:res.data}))
+axios.get(`https://mockapitestkiyaji.herokuapp.com/products?_page=1&_limit=4`).then((res)=>dispatch({type:"datafetch",payload:res.data}))
 },[])
 
 
@@ -33,12 +33,13 @@ axios.get(`https://mockapitestkiyaji.herokuapp.com/products`)
             <p id="day">4 weak programe-32 min/day</p>
             <h5>{el.title}</h5>
        
-            <p>${el.price}</p>
+            <p>{el.price}</p>
        </div>
        )
     }
     </div>
-  
+    <Link to="/programs"> <button>Add to more</button></Link>
+
     </div>
   )
 }
