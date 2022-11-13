@@ -76,7 +76,7 @@ const navigate=useNavigate()
    
     <Text>Meals Plane</Text>
 
-    <Text>Pilots Programe</Text>
+    <Text>Pilot Programe</Text>
    
     <Text>Routines</Text>
 
