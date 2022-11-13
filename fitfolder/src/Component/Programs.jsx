@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import axios from "axios"
 import { AuthContext } from './AuthComponent'
 import "./Programs.css";
+import Fotter from './Fotter';
+import Navbaar from './Navbaar';
 export default function Programs() {
 
 const {state,dispatch}=useContext(AuthContext)
@@ -10,13 +12,14 @@ const {state,dispatch}=useContext(AuthContext)
 
 
 useEffect(()=>{
-axios.get(`https://mockapitestkiyaji.herokuapp.com/products?_page=1&_limit=4`).then((res)=>dispatch({type:"datafetch",payload:res.data}))
+axios.get(`https://mockapitestkiyaji.herokuapp.com/products`)
+.then((res)=>dispatch({type:"datafetch",payload:res.data}))
 },[])
 
 
   return (
-
-
+<>
+<Navbaar/>
 
     <div id="box">
 
@@ -37,8 +40,9 @@ axios.get(`https://mockapitestkiyaji.herokuapp.com/products?_page=1&_limit=4`).t
        )
     }
     </div>
-    <button>Add to more</button>
-
+  
     </div>
+    <Fotter/>
+    </>
   )
 }

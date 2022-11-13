@@ -1,7 +1,12 @@
 import React from 'react'
-import { Box, Button, Center, Flex, Icon, Image, Link, Popover, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Spacer, Stack, Text}  from "@chakra-ui/react"
+import { Box, Button, Center, Flex, Icon, Image,  Popover, PopoverBody, Link,PopoverContent, PopoverHeader, PopoverTrigger, Spacer, Stack, Text}  from "@chakra-ui/react"
 import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
+import { useNavigate } from 'react-router-dom'
+//  import { Link } from 'react-router-dom'
+
  export default function Navbaar() {
+const navigate=useNavigate()
+
   return (
     <div>
          <Flex >
@@ -27,13 +32,13 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
   {/* <Center> */}
   <PopoverContent bg='black' color='white' textalign="center" height="70px"  >
   
-    <PopoverHeader fontWeight='semibold' textAlign={"center"}  width={"70%"}><Link>
+    <PopoverHeader fontWeight='semibold' textAlign={"center"}  width={"70%"}>
     <Flex gap={"40px"} marginLeft={"40px"} >
     <Text>Workout Video</Text>
    
     <Text>Custom WorkOut</Text>
     </Flex>
-    </Link></PopoverHeader>
+    </PopoverHeader>
     
     
     <PopoverBody color="white"  width={"80%"} marginLeft={"30px"} marginRight={"-550px"}   >
@@ -65,7 +70,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
   {/* <Center> */}
   <PopoverContent bg='black' color='white' textalign="center" height="80px" >
   
-    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   ><Link>  
+    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   >  
   <Flex gap={"40px"} marginLeft={"40px"} >
     <Text>Workout Program </Text>
    
@@ -76,7 +81,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
     <Text>Routines</Text>
 
   </Flex>
-  </Link></PopoverHeader>
+  </PopoverHeader>
     
     
     <PopoverBody color="white"  width={"80%"} marginLeft={"30px"} marginRight={"-550px"}   >
@@ -111,7 +116,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
   {/* <Center> */}
   <PopoverContent bg='black' color='white' textalign="center" height="70px" >
   
-    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   ><Link>  
+    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"} >  
   <Flex gap={"40px"} marginLeft={"40px"} >
     <Text>Expert Articles</Text>
    
@@ -120,7 +125,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
     <Text>Wellness Video</Text>
 
 
-  </Flex></Link></PopoverHeader>
+  </Flex></PopoverHeader>
     
     
     <PopoverBody color="white"  width={"80%"} marginLeft={"30px"} marginRight={"-550px"}   >
@@ -157,7 +162,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
   {/* <Center> */}
   <PopoverContent bg='black' color='white' textalign="center" height="70px" >
   
-    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   ><Link>  
+    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   >
   <Flex gap={"40px"} marginLeft={"40px"} >
     <Text>Community</Text>
    
@@ -166,7 +171,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
     <Text>WHat's New</Text>
 
 
-  </Flex></Link></PopoverHeader>
+  </Flex></PopoverHeader>
     
     
     <PopoverBody color="white"  width={"80%"} marginLeft={"30px"} marginRight={"-550px"}   >
@@ -198,7 +203,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
   {/* <Center> */}
   <PopoverContent bg='black' color='white' textalign="center" height="60px" >
   
-    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   ><Link>  
+    <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   >  
   <Flex gap={"40px"} marginLeft={"40px"} >
     <Text>About</Text>
    
@@ -208,7 +213,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
    
     <Text>Our Team</Text>
 
-  </Flex></Link></PopoverHeader>
+  </Flex></PopoverHeader>
     
     
     <PopoverBody color="white"  width={"80%"} marginLeft={"30px"} marginRight={"-550px"}   >
@@ -263,8 +268,14 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
     Join for free and start building and tracking your workouts, get support from other Fitness Blender members and more!
 
 <Stack >
-<Link ><Button bg="blue" mt="10px" width="130px" marginTop={"35px"} >Join</Button ></Link>
-<Link ><Button bg="black" color="white" width="130px" border="1px" marginTop={"35px"}>Sign in</Button></Link>
+<Link><Button bg="blue" mt="10px" width="130px" marginTop={"35px"} >Join</Button ></Link>
+{/* <Link to="/login">
+       <Button bg="black" color="white" width="130px" border="1px" marginTop={"35px"}>Sign in</Button>
+      </Link> */}
+{/* <Link to="/login">login</Link> */}
+
+<Button onClick={()=>navigate("/login")}>Login</Button>
+
 </Stack>
 
     </PopoverBody>
@@ -280,7 +291,7 @@ import { AiFillCaretDown, AiOutlineMonitor, AiTwotoneUsb } from "react-icons/ai"
             <Spacer/>
             <Flex mt="20px"><Box mr="30px" width={"20px"}  marginTop={"-15px"}><Icon as={AiOutlineMonitor}
              boxSize="30px"/>
-            </Box> <Link  ><Icon as={AiTwotoneUsb} boxSize="30px"  marginTop={"-20px"}></Icon></Link></Flex>
+            </Box> <Icon as={AiTwotoneUsb} boxSize="30px"  marginTop={"-20px"}></Icon></Flex>
            
             </Flex>
             

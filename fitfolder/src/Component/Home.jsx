@@ -1,9 +1,17 @@
 import { Stack,Box, Button, Link, Popover, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger } from '@chakra-ui/react'
 import React from 'react'
+import Fotter from './Fotter'
+import Navbaar from './Navbaar'
+import Program from './Program'
+import Programs from './Programs'
 
 export default function () {
   return (
+    <>
+<Navbaar/>
     <div>
+      
+    
      <div  style={{
         backgroundColor: "rgb(49,172,201)",
         display:"flex"
@@ -144,5 +152,9 @@ export default function () {
 
 
     </div>
+    <Program/>
+   <Fotter/>
+  
+    </>
   )
 }
