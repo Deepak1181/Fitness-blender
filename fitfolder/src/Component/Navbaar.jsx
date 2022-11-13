@@ -72,7 +72,7 @@ const navigate=useNavigate()
   
     <PopoverHeader fontWeight='semibold' textAlign={"center"} width={"70%"}   >  
   <Flex gap={"40px"} marginLeft={"40px"} >
-    <Text>Workout Program </Text>
+  <Text onClick={()=>navigate("/programs")}>Workout Program </Text>
    
     <Text>Meal Plane</Text>
 
@@ -269,12 +269,12 @@ const navigate=useNavigate()
 
 <Stack >
 <Link><Button bg="blue" mt="10px" width="130px" marginTop={"35px"} >Join</Button ></Link>
-{/* <Link to="/login">
-       <Button bg="black" color="white" width="130px" border="1px" marginTop={"35px"}>Sign in</Button>
-      </Link> */}
-{/* <Link to="/login">login</Link> */}
+<Link >
+       <Button onClick={()=>navigate("/login")} bg="black" color="white" width="130px" border="1px" marginTop={"35px"}>Sign in</Button>
+      </Link> 
+{/* <Link to="/login">login</Link>
 
-<Button onClick={()=>navigate("/login")}>Login</Button>
+ <Button onClick={()=>navigate("/login")} bg="black" color="white" width="130px" border="1px" marginLeft={"-30px"} marginTop={"35px"}>Sign in</Button>
 {/* if(isAuth){
  <Button onClick={()=>navigate("/login")}>Logout</Button>
 } */}
