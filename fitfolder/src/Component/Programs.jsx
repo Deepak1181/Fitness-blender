@@ -23,8 +23,7 @@ axios.get(`https://mockapitestkiyaji.herokuapp.com/products`)
 
     <div id="box">
 
-<h1>Not sure where to start?</h1>
-<p>Programs offer day-to-day guidance on an interactive calendar to keep you on track.</p>
+<h1>Workout Programs</h1>
     
     <div id='grid'>
 

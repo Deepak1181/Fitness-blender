@@ -38,7 +38,7 @@ axios.get(`https://mockapitestkiyaji.herokuapp.com/products?_page=1&_limit=4`).t
        )
     }
     </div>
-    <Link to="/programs"> <button>Add to more</button></Link>
+    <Link to="/programs"> <button>View All Programs</button></Link>
 
     </div>
   )

@@ -4,6 +4,7 @@ import Fotter from './Fotter'
 import Navbaar from './Navbaar'
 import Program from './Program'
 import Programs from './Programs'
+import Workout from './Workout'
 
 export default function () {
   return (
@@ -154,6 +155,8 @@ export default function () {
     </div>
     <Program/>
    <Fotter/>
+
+
   
     </>
   )

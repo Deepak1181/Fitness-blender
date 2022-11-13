@@ -28,6 +28,7 @@ const handleSubmit=(e)=>{
       if(res.token){
         loginUser(res.token)
         navigate("/");
+        
         console.log(res)
       }
     }).catch((err) => {
@@ -39,7 +40,7 @@ const handleSubmit=(e)=>{
 
   return (
     <div>
-        <h1>hellloo</h1>
+        <h1>HELLO USER</h1>
         <form onSubmit={handleSubmit}>
         <div>
           <label>
